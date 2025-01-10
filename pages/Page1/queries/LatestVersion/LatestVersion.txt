@@ -1,0 +1,1 @@
+SELECT max(version) as latest_version FROM ___test_vc_history WHERE test_vc_id = '{{this.params.test_vc_id || Table1.triggeredRow.id}}'

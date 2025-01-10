@@ -83,7 +83,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -109,7 +113,7 @@
   "parentRowSpace": 10,
   "primaryColumns": {
     "customColumn1": {
-      "alias": "customColumn1",
+      "alias": "edit",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -136,9 +140,10 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "customColumn1",
+      "label": "edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{storeValue('edit_mode', 'update').then(() => {\n  showModal(Modal1.name);\n});}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
