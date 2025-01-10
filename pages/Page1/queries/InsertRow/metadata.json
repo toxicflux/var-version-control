@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6780d968679a2f353a981133_4d3c1067-528b-4ddc-b9ff-33bc594fbb1e",
-  "id": "Page1_test_vc",
+  "gitSyncId": "6780d968679a2f353a981133_7ed18052-6b38-41da-86da-e2b72e2f9301",
+  "id": "Page1_InsertRow",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT vc.id, vc_h.version, vc_h.summary FROM  ___test_vc vc LEFT JOIN  ___test_vc_history vc_h ON vc_h.test_vc_id = vc.id AND vc_h.version = (\n      SELECT MAX(version)\n      FROM ___test_vc_history\n      WHERE test_vc_id = vc.id\n  );\n-- Please enter a valid table name and hit RUN\n",
+      "body": "INSERT INTO ___test_vc (\n\tid\n) VALUES (\n\t{{this.params.id}}\n)  on CONFLICT (id) DO NOTHING;\n\nINSERT INTO ___test_vc_history ( \n\tversion,\n\ttest_vc_id,\n\tsummary\n) VALUES (\n\t{{this.params.version}},\n\t{{this.params.id}},\n\t{{this.params.summary}}\n) ",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "PostgresDB",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "test_vc",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": false,
+    "name": "InsertRow",
     "pageId": "Page1",
     "userSetOnLoad": false
   }

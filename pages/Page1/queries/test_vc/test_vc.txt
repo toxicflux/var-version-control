@@ -1,2 +1,6 @@
-SELECT vc.id, vc_h.version, vc_h.summary FROM  ___test_vc vc LEFT JOIN  ___test_vc_history vc_h ON vc_h.test_vc_id = vc.id AND vc_h.version = 1
+SELECT vc.id, vc_h.version, vc_h.summary FROM  ___test_vc vc LEFT JOIN  ___test_vc_history vc_h ON vc_h.test_vc_id = vc.id AND vc_h.version = (
+      SELECT MAX(version)
+      FROM ___test_vc_history
+      WHERE test_vc_id = vc.id
+  );
 -- Please enter a valid table name and hit RUN

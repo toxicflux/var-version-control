@@ -1,0 +1,15 @@
+INSERT INTO ___test_vc (
+	id
+) VALUES (
+	{{this.params.id}}
+)  on CONFLICT (id) DO NOTHING;
+
+INSERT INTO ___test_vc_history ( 
+	version,
+	test_vc_id,
+	summary
+) VALUES (
+	{{this.params.version}},
+	{{this.params.id}},
+	{{this.params.summary}}
+) 
