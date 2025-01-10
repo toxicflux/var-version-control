@@ -1,19 +1,12 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "borderRadius": "0px",
+  "bottomRow": 4,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#16a34a",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -24,7 +17,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "wsyg09poxi",
-  "leftColumn": 54,
+  "leftColumn": 55,
   "minWidth": 120,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 48,
@@ -32,17 +25,19 @@
   "mobileTopRow": 5,
   "needsErrorInfo": false,
   "onClick": "{{storeValue('edit_mode', 'create').then(() => {\n  showModal(Modal1.name);\n});}}",
+  "originalBottomRow": 34,
+  "originalTopRow": 30,
   "parentColumnSpace": 20.09375,
-  "parentId": "0",
+  "parentId": "wabxyludho",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "text": "Add",
-  "topRow": 5,
+  "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "osyvrlnqbe",

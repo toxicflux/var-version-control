@@ -2,10 +2,10 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderColor": "#E0DEDE",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0px",
   "borderWidth": "1",
-  "bottomRow": 37,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "bottomRow": 33,
+  "boxShadow": "none",
   "canFreezeColumn": true,
   "childStylesheet": {
     "button": {
@@ -51,12 +51,6 @@
       "key": "accentColor"
     },
     {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
       "key": "tableData"
     },
     {
@@ -67,15 +61,6 @@
     },
     {
       "key": "primaryColumns.summary.computedValue"
-    },
-    {
-      "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
-      "key": "primaryColumns.customColumn1.borderRadius"
-    },
-    {
-      "key": "primaryColumns.customColumn1.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -108,17 +93,19 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
+  "originalBottomRow": 63,
+  "originalTopRow": 35,
   "parentColumnSpace": 20.09375,
-  "parentId": "0",
+  "parentId": "wabxyludho",
   "parentRowSpace": 10,
   "primaryColumns": {
     "customColumn1": {
       "alias": "edit",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "buttonColor": "#16a34a",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "TERTIARY",
       "columnType": "iconButton",
@@ -248,11 +235,11 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "searchKey": "",
   "tableData": "{{test_vc.data}}",
   "textSize": "0.875rem",
-  "topRow": 9,
+  "topRow": 5,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
