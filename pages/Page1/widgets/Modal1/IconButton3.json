@@ -8,11 +8,23 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconName": "caret-right",
-  "isDisabled": false,
+  "isDisabled": "{{!(parseInt(version.text) <= Table1.triggeredRow.version)}}",
   "isLoading": false,
   "isVisible": true,
   "key": "unye3krtom",
@@ -23,6 +35,7 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onClick": "{{load_vc_history.run({\n  version: parseInt(version.text) + 1\n});}}",
   "parentColumnSpace": 6.9375,
   "parentId": "vdidqoo003",
   "parentRowSpace": 10,

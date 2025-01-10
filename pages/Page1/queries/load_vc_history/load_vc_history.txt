@@ -1,0 +1,6 @@
+SELECT * FROM  ___test_vc_history vc_h WHERE vc_h.test_vc_id = '{{this.params.test_vc_id || Table1.triggeredRow.id}}' AND 
+({{typeof this.params.version === 'undefined'}} AND vc_h.version = (
+      SELECT MAX(version)
+      FROM ___test_vc_history
+      WHERE test_vc_id = '{{this.params.test_vc_id  || Table1.triggeredRow.id}}'
+  )) OR vc_h.version = {{this.params.version}};

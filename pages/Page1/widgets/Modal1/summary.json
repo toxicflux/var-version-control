@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultText": "{{appsmith.store.edit_mode === 'create' ? '': Table1.triggeredRow.summary}}",
+  "defaultText": "{{appsmith.store.edit_mode === 'create' ? '': load_vc_history.data[0].summary}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

@@ -130,7 +130,7 @@
       "label": "edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{storeValue('edit_mode', 'update').then(() => {\n  showModal(Modal1.name);\n});}}",
+      "onClick": "{{storeValue('edit_mode', 'update').then(() => {\n  load_vc_history.run({\n    test_vc_id: Table1.triggeredRow.id\n  }).then(() => {\n    showModal(Modal1.name);\n  });\n});}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
