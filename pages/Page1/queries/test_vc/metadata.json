@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT vc.id, vc_h.version, vc_h.summary FROM  ___test_vc vc LEFT JOIN  ___test_vc_history vc_h ON vc_h.test_vc_id = vc.id AND vc_h.version = (\n      SELECT MAX(version)\n      FROM ___test_vc_history\n      WHERE test_vc_id = vc.id\n  );\n-- Please enter a valid table name and hit RUN\n",
+      "body": "SELECT vc.id, vc_h.version, vc_h.summary FROM  ___test_vc vc LEFT JOIN  ___test_vc_history vc_h ON vc_h.test_vc_id = vc.id AND vc_h.version = (\n      SELECT MAX(version)\n      FROM ___test_vc_history\n      WHERE test_vc_id = vc.id\n  );\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
